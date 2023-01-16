@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":[["VFSDirectory","A struct that represents a node in the VFS "]]};

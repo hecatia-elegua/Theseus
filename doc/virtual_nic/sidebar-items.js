@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":[["VirtualNic","A structure that contains a set of `RxQueue`s and `TxQueue`s that can be used to send and receive packets."]]};

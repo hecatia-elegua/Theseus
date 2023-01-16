@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":[["Coord","A 2-D integer coordinate."],["Rectangle","A rectangle given by its top-left coordinate and bottom-right coordinate."]]};
