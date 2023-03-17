@@ -244,11 +244,6 @@
 <a href="#244" id="244">244</a>
 <a href="#245" id="245">245</a>
 <a href="#246" id="246">246</a>
-<a href="#247" id="247">247</a>
-<a href="#248" id="248">248</a>
-<a href="#249" id="249">249</a>
-<a href="#250" id="250">250</a>
-<a href="#251" id="251">251</a>
 </pre><pre class="rust"><code><span class="doccomment">//! The main initialization routine and setup logic of the OS. 
 //!
 //! The `captain` steers the ship of Theseus, meaning that it contains basic logic 
@@ -286,7 +281,7 @@
 </span><span class="kw">mod </span>mirror_log_callbacks {
     <span class="doccomment">/// The callback for use in the logger crate to mirror log functions to the early VGA screen.
     </span><span class="kw">pub</span>(<span class="kw">crate</span>) <span class="kw">fn </span>mirror_to_early_vga(args: core::fmt::Arguments) {
-        <span class="macro">vga_buffer::println_raw!</span>(<span class="string">&quot;{}&quot;</span>, args);
+        <span class="macro">early_printer::println!</span>(<span class="string">&quot;{}&quot;</span>, args);
     }
 
     <span class="doccomment">/// The callback for use in the logger crate to mirror log functions to the
@@ -422,11 +417,6 @@
     </span><span class="attr">#[cfg(target_arch = <span class="string">&quot;x86_64&quot;</span>)] </span>{
         multiple_heaps::switch_to_multiple_heaps()<span class="question-mark">?</span>;
         <span class="macro">info!</span>(<span class="string">&quot;Initialized per-core heaps&quot;</span>);
-    }
-
-    <span class="attr">#[cfg(feature = <span class="string">&quot;uefi&quot;</span>)] </span>{
-        <span class="macro">log::error!</span>(<span class="string">&quot;uefi boot cannot proceed as it is not fully implemented&quot;</span>);
-        <span class="kw">loop </span>{}
     }
 
     <span class="comment">// Initialize the window manager, and also the PAT, if available.
