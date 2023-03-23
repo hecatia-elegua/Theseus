@@ -91,7 +91,7 @@ var sourcesIndex = JSON.parse('{\
 "mod_mgmt":["",[],["lib.rs","parse_nano_core.rs","replace_nano_core_crates.rs","serde.rs"]],\
 "mouse":["",[],["lib.rs"]],\
 "mouse_data":["",[],["lib.rs"]],\
-"multicore_bringup":["",[],["lib.rs"]],\
+"multicore_bringup":["",[],["lib.rs","x86_64.rs"]],\
 "multiple_heaps":["",[],["lib.rs"]],\
 "mutex_preemption":["",[],["lib.rs","mutex_preempt.rs","rwlock_preempt.rs"]],\
 "mutex_sleep":["",[],["lib.rs","mutex.rs","rwlock.rs"]],\
@@ -111,7 +111,6 @@ var sourcesIndex = JSON.parse('{\
 "panic_entry":["",[],["lib.rs"]],\
 "panic_wrapper":["",[],["lib.rs"]],\
 "path":["",[],["lib.rs"]],\
-"pause":["",[],["lib.rs"]],\
 "pci":["",[],["lib.rs"]],\
 "percent_encoding":["",[],["lib.rs"]],\
 "physical_nic":["",[],["lib.rs"]],\
