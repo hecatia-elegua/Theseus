@@ -1,9 +1,16 @@
 #!/bin/sh
 
-set -e
+# Allows us to read user input below, assigns stdin to keyboard
+exec < /dev/tty
 
-read  -n 1 -p "Really push? Have you done _? Y/y" yn
-case $yn in
-    [Yy]* ) break;;
-esac
-# make clippy
+while true; do
+  read -p "[pre-push hook] Have you called clippy before pushing? (Y/n) " yn
+  if [ "$yn" = "" ]; then
+    yn='Y'
+  fi
+  case $yn in
+      [Yy] ) break;;
+      [Nn] ) exit;;
+      * ) echo "Please answer y or n for yes or no.";;
+  esac
+done
