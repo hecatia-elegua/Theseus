@@ -6,5 +6,4 @@ read  -n 1 -p "Really push? Have you done _? Y/y" yn
 case $yn in
     [Yy]* ) break;;
 esac
-# echo '+make clippy'
 # make clippy
